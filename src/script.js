@@ -63,9 +63,9 @@ function showWinner(firstValue) {
 function checkWinnersMatch() {
     let winnerFound = false;
     for (let winnerPattern of winsMatch) {
-        let firstValue = btnEle[winnerPattern[0]].innerText;
-        let secondValue = btnEle[winnerPattern[1]].innerText;
-        let thirdValue = btnEle[winnerPattern[2]].innerText;
+        let firstValue = btnEle[winnerPattern[0]].textContent.trim();
+        let secondValue = btnEle[winnerPattern[1]].textContent.trim();
+        let thirdValue = btnEle[winnerPattern[2]].textContent.trim();
         if (firstValue != '' && secondValue != '' && thirdValue != '') {
             if (firstValue === secondValue && secondValue === thirdValue) {
                 disabledButton();
