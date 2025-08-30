@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.my-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #141b26;
+
+
+}
+
+.my-img {
+    width: 35%;
+
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+
+}
+
+/* --- Body --- */
+body {
+    background-color: #141b26;
+    /* darker charcoal/navy for contrast */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Board Boxes --- */
+.box {
+    background-color: #1f2a38;
+    /* slightly lighter than body for contrast */
+    border: 2px solid #3a4a5c;
+    border-radius: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Player Wins Buttons --- */
+.show-player1-wins-count,
+.show-player2-wins-count {
+    background-color: #1c2733;
+    /* slightly lighter than body but darker than boxes */
+    border: 2px solid #3a4a5c;
+    max-width: 200px;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+.wins-count {
+    color: #ffd700;
+}
+
+/* --- Player Name Inputs --- */
+.first-player,
+.second-player {
+    background-color: #1c2733;
+    /* matches wins buttons for cohesion */
+    border: 2px solid #00cfff;
+    /* neon accent */
+    color: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    max-width: 200px;
+    outline: none;
+}
+
+
+
+
+.winners-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+.show-winner {
+    font-size: large;
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+}
+
+
+
+.winners-identifier {
+    color: darkturquoise;
+    font-size: large;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 110px 110px 110px;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    align-items: stretch;
+    justify-items: stretch;
+    margin-top: 15px;
+
+}
+
+/* --- Board Boxes --- */
+.box {
+    background: linear-gradient(145deg, #1b2733, #1f2f3d);
+    /* subtle depth */
+    border: 2px solid #3a4a5c;
+    /* grid separation */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border-radius: 0;
+    overflow: hidden;
+    /* square edges */
+}
+
+/* Hover effect */
+.box:hover:not(:disabled) {
+    background: linear-gradient(145deg, #253240, #2b3b50);
+    border-color: #00cfff;
+    /* neon cyan glow */
+    box-shadow: 0 0 14px rgba(0, 207, 255, 0.6);
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Click effect */
+.box:active:not(:disabled) {
+    transform: scale(0.95);
+    box-shadow: 0 0 8px rgba(0, 207, 255, 0.4) inset;
+}
+
+/* --- Winning box animation --- */
+@keyframes winningGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+}
+
+/* --- Pop-in animation for X and O --- */
+@keyframes popIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* --- Player X Style (Gradient Neon Coral) --- */
+.style-of-x {
+    font-size: xx-large;
+    font-weight: bold;
+    animation: popIn 0.3s ease;
+    background: linear-gradient(90deg, #ff6b4c, #ff9977);
+    -webkit-background-clip: text;
+    /* clip gradient to text */
+    -webkit-text-fill-color: transparent;
+    /* make text transparent so gradient shows */
+    text-shadow: 0 0 8px #ff6b4c, 0 0 20px rgba(255, 107, 76, 0.7);
+}
+
+/* --- Player O Style (Gradient Electric Cyan) --- */
+.style-of-o {
+    font-size: xx-large;
+    font-weight: bold;
+    animation: popIn 0.3s ease;
+    background: linear-gradient(90deg, #00cfff, #66f7ff);
+    -webkit-background-clip: text;
+    /* needed for gradient */
+    -webkit-text-fill-color: transparent;
+    /* transparent text to show gradient */
+    text-shadow: 0 0 8px #00cfff, 0 0 20px rgba(0, 207, 255, 0.7);
+}
+
+
+/* --- Winning Boxes Example --- */
+.box.winner-x {
+    animation: winningGlow 1s infinite alternate;
+    border-color: #ff6b4c;
+}
+
+.box.winner-o {
+    animation: winningGlow 1s infinite alternate;
+    border-color: #00cfff;
+}
+
+
+.button-container {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.reset-btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.play-again-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
