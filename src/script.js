@@ -48,11 +48,11 @@ function showWinner(firstValue) {
     paraElement.innerHTML = `The winner is : <span class="winners-identifier">${firstValue}</span>`;
     if (firstValue === getPlayerName1()) {
         players['player1-wins']++;
-        player1Button.innerHTML = `${firstValue} wins: <span class="wins-count">${players['player1-wins']}</span>`;
+        player1Button.innerHTML = `${firstValue} wins : <span class="wins-count">${players['player1-wins']}</span>`;
 
     } else if (firstValue === getPlayerName2()) {
         players['player2-wins']++;
-        player2Button.innerHTML = `${firstValue} wins: <span class="wins-count">${players['player2-wins']}</span>`;
+        player2Button.innerHTML = `${firstValue} wins : <span class="wins-count">${players['player2-wins']}</span>`;
 
     }
 }
@@ -92,7 +92,7 @@ document.querySelector('.reset-btn')
         }
         player1.value = '';
         player2.value = '';
-        player1Button.innerHTML = `<span class="wins-count">Player1 wins :</span>${players['player1-wins'] = 0}`;
+        player1Button.innerHTML = `<span class="wins-count">Player1 wins :</span> ${players['player1-wins'] = 0}`;
         player2Button.innerHTML = `<span class="wins-count">Player2 wins :</span> ${players['player2-wins'] = 0}`;
         paraElement.innerHTML = `No winner was found yet`;
     });
