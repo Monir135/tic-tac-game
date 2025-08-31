@@ -63,9 +63,10 @@ body {
 
 .wins-count {
     color: #ffd700;
-    font-size:medium;
+    font-size: medium;
     font-weight: 700;
 }
+
 
 /* --- Player Name Inputs --- */
 .first-player,
@@ -79,7 +80,7 @@ body {
     border-radius: 6px;
     max-width: 200px;
     outline: none;
-    font-size:medium;
+    font-size: medium;
     font-weight: 700;
 }
 
@@ -149,8 +150,9 @@ body {
 
     }
 }
-@media (min-width: 1025px){
-        .grid-container {
+
+@media (min-width: 1025px) {
+    .grid-container {
         display: grid;
         grid-template-columns: 200px 200px 200px;
         justify-content: center;
