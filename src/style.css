@@ -63,6 +63,8 @@ body {
 
 .wins-count {
     color: #ffd700;
+    font-size:medium;
+    font-weight: 700;
 }
 
 /* --- Player Name Inputs --- */
@@ -127,6 +129,7 @@ body {
         width: 45%;
 
     }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
