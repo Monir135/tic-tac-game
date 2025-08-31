@@ -91,18 +91,11 @@ body {
 }
 
 .show-winner {
-    font-size: large;
+    font-size: xx-large;
     font-weight: bold;
     color: lightgoldenrodyellow;
 }
 
-
-
-.winners-identifier {
-    color: darkturquoise;
-    font-size: large;
-
-}
 
 .grid-container {
     display: grid;
@@ -132,16 +125,6 @@ body {
         width: 45%;
 
     }
-    .show-winner {
-    font-size:x-large;
-    font-weight: bold;
-    color: lightgoldenrodyellow;
-}
-.winners-identifier {
-    color: darkturquoise;
-    font-size:x-large;
-
-}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -160,16 +143,6 @@ body {
         width: 40%;
 
     }
-    .show-winner {
-    font-size:xx-large;
-    font-weight: bold;
-    color: lightgoldenrodyellow;
-}
-.winners-identifier {
-    color: darkturquoise;
-    font-size:xx-large;
-
-}
 }
 @media (min-width: 1025px){
         .grid-container {
@@ -187,16 +160,6 @@ body {
         width: 40%;
 
     }
-    .show-winner {
-    font-size:xx-large;
-    font-weight: bold;
-    color: lightgoldenrodyellow;
-}
-.winners-identifier {
-    color: darkturquoise;
-    font-size:xx-large;
-
-}
 }
 
 /* --- Board Boxes --- */

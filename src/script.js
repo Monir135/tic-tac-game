@@ -46,13 +46,16 @@ btnEle.forEach((value, index) => {
 const paraElement = document.querySelector('.show-winner');
 function showWinner(firstValue) {
     paraElement.innerHTML = `The winner is : <span class="winners-identifier">${firstValue}</span>`;
+    let winnersIdentifier = document.querySelector('.winners-identifier');
     if (firstValue === getPlayerName1()) {
         players['player1-wins']++;
         player1Button.innerHTML = `${firstValue} wins : <span class="wins-count">${players['player1-wins']}</span>`;
+        winnersIdentifier.classList.add('style-of-x');
 
     } else if (firstValue === getPlayerName2()) {
         players['player2-wins']++;
         player2Button.innerHTML = `${firstValue} wins : <span class="wins-count">${players['player2-wins']}</span>`;
+        winnersIdentifier.classList.add('style-of-o');
 
     }
 }
