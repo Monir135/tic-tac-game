@@ -77,6 +77,8 @@ body {
     border-radius: 6px;
     max-width: 200px;
     outline: none;
+    font-size:medium;
+    font-weight: 700;
 }
 
 
