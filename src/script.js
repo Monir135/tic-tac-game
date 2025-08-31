@@ -11,11 +11,11 @@ const btnEle = document.querySelectorAll('.box');
 
 let player1 = document.querySelector('.first-player');
 function getPlayerName1() {
-    return player1.value;
+    return player1.value.trim();
 }
 let player2 = document.querySelector('.second-player');
 function getPlayerName2() {
-    return player2.value;
+    return player2.value.trim();
 }
 
 
@@ -63,9 +63,9 @@ function showWinner(firstValue) {
 function checkWinnersMatch() {
     let winnerFound = false;
     for (let winnerPattern of winsMatch) {
-        let firstValue = btnEle[winnerPattern[0]].textContent.trim();
-        let secondValue = btnEle[winnerPattern[1]].textContent.trim();
-        let thirdValue = btnEle[winnerPattern[2]].textContent.trim();
+        let firstValue = btnEle[winnerPattern[0]].innerText;
+        let secondValue = btnEle[winnerPattern[1]].innerText;
+        let thirdValue = btnEle[winnerPattern[2]].innerText;
         if (firstValue != '' && secondValue != '' && thirdValue != '') {
             if (firstValue === secondValue && secondValue === thirdValue) {
                 disabledButton();
