@@ -98,6 +98,7 @@ document.querySelector('.reset-btn')
         player1Button.innerHTML = `<span class="wins-count">Player1 wins :</span> ${players['player1-wins'] = 0}`;
         player2Button.innerHTML = `<span class="wins-count">Player2 wins :</span> ${players['player2-wins'] = 0}`;
         paraElement.innerHTML = `No winner was found yet`;
+        enteredValue = false;
     });
 
 
