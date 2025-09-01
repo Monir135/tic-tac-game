@@ -93,12 +93,14 @@ body {
     align-items: center;
     margin-top: 15px;
 
+
 }
 
 .show-winner {
     font-size: xx-large;
     font-weight: bold;
     color: lightgoldenrodyellow;
+    text-align: center;
 }
 
 
@@ -110,8 +112,15 @@ body {
     min-height: 300px;
     align-items: stretch;
     justify-items: stretch;
-    margin-top: 15px;
+    margin-bottom: 10px;
 
+}
+.boxes-grid-visibility{
+display: none;
+}
+.congrats-container{
+    text-align: center;
+    margin-top: 30px;
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -123,7 +132,7 @@ body {
         min-height: 400px;
         align-items: stretch;
         justify-items: stretch;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .my-img {
@@ -142,7 +151,7 @@ body {
         min-height: 500px;
         align-items: stretch;
         justify-items: stretch;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .my-img {
@@ -160,7 +169,7 @@ body {
         min-height: 500px;
         align-items: stretch;
         justify-items: stretch;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .my-img {
@@ -268,12 +277,15 @@ body {
 
 .button-container {
     display: flex;
-    margin-top: 15px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
+    
 }
 
-
+.button-container-position{
+    margin-top: 40px;
+}
 
 .reset-btn {
     padding-left: 30px;
@@ -285,7 +297,6 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 3px;
 }
 
 .play-again-btn {
@@ -299,5 +310,4 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 3px;
 }
