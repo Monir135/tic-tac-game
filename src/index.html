@@ -20,7 +20,7 @@
 
 <body>
     <div class="my-img-container">
-        <img class="my-img" src="Untitled-1.png" alt="Creater's Image">
+        <img id="be-visible" class="my-img" src="Untitled-1.png" alt="Creater's Image">
     </div>
     <div class="winners-container">
         <p class="show-winner"></p>
@@ -38,8 +38,8 @@
     </div>
     <div class="congrats-container"></div>
       <div class="button-container">
-        <button class="reset-btn">Reset</button>
-        <button class="play-again-btn">Play Again</button>
+        <a href="#be-visible"><button class="reset-btn">Reset</button></a>
+        <a href="#comeup"><button class="play-again-btn">Play Again</button></a>
     </div>
     <div class="grid-container">
         <button class="box"></button>
@@ -50,7 +50,7 @@
         <button class="box"></button>
         <button class="box"></button>
         <button class="box"></button>
-        <button class="box"></button>
+        <button id="comeup" class="box"></button>
 
     </div>
     <script src="script.js">

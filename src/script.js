@@ -29,12 +29,14 @@ btnEle.forEach((value, index) => {
             value.innerHTML = `<span class="style-of-x">${getPlayerName1()}</span>`;
             enteredValue = true;
             if (player1.value === '') {
+                speak(`Please enter player1 name`);
                 alert(`Please enter player1 name`);
                 value.disabled = false;
             }
         } else {
             value.innerHTML = `<span class="style-of-o">${getPlayerName2()}</span>`;
             if (player2.value === '') {
+                speak(`Please enter player2 name`);
                 alert(`Please enter player2 name`);
                 value.disabled = false;
             }
@@ -63,6 +65,8 @@ function showWinner(firstValue) {
         winnersIdentifier.classList.add('style-of-o');
 
     }
+    speak(`Congratulations ${firstValue}, you are the winner!`);
+
 }
 
 let congratsContainer = document.querySelector('.congrats-container');
@@ -78,7 +82,17 @@ function congrastTheWinner(firstValue) {
             congratsContainer.innerHTML = `<span class="style-of-x">Congratulations!</span>  <span class="style-of-o">${firstValue}</span>`;
         }
         buttonContainer.classList.add('button-container-position');
-    },300);
+    }, 300);
+}
+
+function speak(text) {
+    // Check if browser supports speech
+    if ('speechSynthesis' in window) {
+        let utterance = new SpeechSynthesisUtterance(text); // Create speech object
+        speechSynthesis.speak(utterance); // Speak it
+    } else {
+        alert("Sorry, your browser does not support speech synthesis.");
+    }
 }
 
 
